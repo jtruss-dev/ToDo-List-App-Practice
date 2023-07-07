@@ -52,4 +52,12 @@ todoInput.addEventListener('keydown', function(event) {
         addTask();
     }
 })
+
+todoList.addEventListener('change', toggleTask)
 //Examples of task
+const initialTasks = ['Buy Groceries', 'Pay Bills', 'Walk the Dog'];
+
+initialTasks.forEach((task)=> {
+    const taskItem = createTaskItem(task);
+    todoList.appendChild(taskItem);
+})
